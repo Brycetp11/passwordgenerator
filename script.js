@@ -20,26 +20,26 @@ function generatePassword() {
     
 
     var lowerCase = confirm("Lower Case Letters?")
-  if (lowerCase === true){
+  if (lowerCase){
     pWordChar = pWordChar.concat(lettersLowerCase)
   }
 
 
 
     var UpperCase = confirm("Upper Case Letters?")
-  if (UpperCase === true) {
+  if (UpperCase) {
     pWordChar = pWordChar.concat(lettersUpperCase)
   }
 
 
     var numChar = confirm("Numbers?")
-  if (numChar===true) {
+  if (numChar) {
     pWordChar = pWordChar.concat(num)
   }
 
 
       var spChar = confirm("Special Characters?")
-  if (spChar===true) {
+  if (spChar) {
       pWordChar = pWordChar.concat(specialChar)
   }
 
@@ -57,9 +57,6 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
-
-
 
   passwordText.value = password;
   
